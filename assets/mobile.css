@@ -1,0 +1,55 @@
+.hamburger {
+    width: 40px;
+    height: 35px;
+    border: 0;
+    border-top: 5px solid #000;
+    background: transparent;
+    position: relative;
+}
+
+.hamburger::before, .hamburger::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-top: 5px solid #000;
+    transform: translateY(10px);
+}
+
+.hamburger::after {
+    transform: translateY(25px);
+}
+
+.hamburger:hover, .hamburger:hover::after, .hamburger:hover::before {
+    border-color: darkcyan;
+}
+
+.dropdown__menu, .dropdown__submenu {
+    display: none;
+}
+
+.hamburger:focus ~ .dropdown__menu {
+    display: block;
+    position: absolute;
+}
+
+.dropdown__item:hover .dropdown__submenu {
+    display: block;
+    left: 50vw;
+}
+
+.dropdown__item {
+    width: 100vw;
+
+    position: relative;
+    text-align: left;
+}
+
+.dropdown__subitem {
+    top: -1em;
+    left: 15vw;
+    width: 100vw;
+    position: relative;
+    z-index: 1;
+}

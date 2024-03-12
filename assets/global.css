@@ -1,0 +1,12 @@
+* {
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+.dropdown__item, .dropdown__subitem {
+    background-color: #fff;
+    border: 5px solid darkblue;
+    height: 20px;
+    margin: auto;
+    padding: 5px 20px;
+}
